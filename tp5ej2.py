@@ -5,10 +5,10 @@
 
 
 def fibonacci(numero):
-    primer_termino = 0
+    primer_termino = 1
     segundo_termino = 1
     tercer_termino = 0
-    i = 1
+    i = 2
     while i < numero:
         tercer_termino = primer_termino + segundo_termino
         primer_termino = segundo_termino
