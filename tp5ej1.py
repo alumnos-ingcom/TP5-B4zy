@@ -6,10 +6,7 @@
 
 def es_par(numero):
     comprobacion = numero / 2
-    if comprobacion - int(comprobacion) == 0:
-        return True
-    else:
-        return False
+    return comprobacion - int(comprobacion) == 0
         
         
 def prueba():
