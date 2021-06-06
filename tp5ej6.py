@@ -16,11 +16,8 @@ def detectar_parentesis(cadena):
             elif len(lista) == 0 or not (llave == signo[lista.pop()]):
                 return False
     cantidad_elementos = len(lista)
-    if cantidad_elementos != 0:
-        return False
-    else:
-        return True
-
+    return cantidad_elementos != 0:
+        
 def prueba():
     cadena = input("Ingrese un texto: ")
     mostrar = detectar_parentesis(cadena)
