@@ -10,10 +10,7 @@ def es_perfecto(numero):
         if numero % i == 0:
             i = int(i)
             lista.append(i)
-    if numero == sum(lista):
-        return True
-    else:
-        return False
+    return numero == sum(lista)
 
 
 def prueba():
