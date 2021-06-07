@@ -13,7 +13,6 @@ def codificar_cesar(texto, cifrado):
         texto_cesar.append(letra_cifrada)
     return "".join(texto_cesar)
 
-
 def decodificar_cesar(texto, cifrado):
     texto = list(texto)
     texto_cesar = []
@@ -25,40 +24,38 @@ def decodificar_cesar(texto, cifrado):
     return "".join(texto_cesar)
         
 def prueba():
-    print('''
-===============================================================================================
-    [1] Descifrar texto
-    [2] Cifrar texto
-===============================================================================================''')
+    from soporte import recuadro
+    from soporte import ingreso_entero
+    recuadro(" [1] Decodificar  [2] Codificar ")
     while True:
-        seleccion = input("Ingrese que quiere hacer [1] o [2]: ")
-        try:
-            seleccion = int(seleccion)
-            if seleccion == 1 or seleccion == 2:
-                break
-            else:
-                print("Unicamente se admiten los valores [1] o [2]")
-        except ValueError:
-            print("Oops, eso no era un numero")
+        mensaje_ingreso = "Ingrese un numero: "
+        mensaje_error = "Oops, eso no era un numero"
+        seleccion = ingreso_entero(mensaje_ingreso, mensaje_error)
+        if seleccion == 1 or seleccion == 2:
+            break
+        else:
+            print("Unicamente se admiten los valores [1] o [2]")
             
     if seleccion == 1:
         texto = input("Ingrese un texto a decodificar: ")
         while True:
-            cifrado = input("Ingrese el cifrado: ")
-            try:
-                cifrado = int(cifrado)
+            mensaje_ingreso = "Ingrese un cifrado: "
+            mensaje_error = "El cifrado debe ser un numero"
+            cifrado = ingreso_entero(mensaje_ingreso, mensaje_error)
+            if cifrado != 0:
                 break
-            except ValueError:
-                print("El cifrado debe ser un numero")
+            else:
+                print("No se admite el 0 como cifrado")
     else:
         texto = input("Ingrese un texto a codificar: ")
         while True:
-            cifrado = input("Ingrese el cifrado: ")
-            try:
-                cifrado = int(cifrado)
+            mensaje_ingreso = "Ingrese un cifrado: "
+            mensaje_error = "El cifrado debe ser un numero"
+            cifrado = ingreso_entero(mensaje_ingreso, mensaje_error)
+            if cifrado != 0:
                 break
-            except ValueError:
-                print("El cifrado debe ser un numero")
+            else:
+                print("No se admite el 0 como cifrado")
 
     if seleccion == 1:
         mostrar = decodificar_cesar(texto, cifrado)
