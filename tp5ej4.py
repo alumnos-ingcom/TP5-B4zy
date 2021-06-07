@@ -29,4 +29,5 @@ def prueba():
     else:
         print(f"El numero [{numero_ingresado}] no es perfécto")
         
-prueba()
+if __name__ == "__main__":
+    prueba()
