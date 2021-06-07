@@ -56,7 +56,7 @@ def prueba():
                 break
             else:
                 print("No se admite el 0 como cifrado")
-
+                
     if seleccion == 1:
         mostrar = decodificar_cesar(texto, cifrado)
         print(f"Su texto decodificado con ROT{cifrado} es '{mostrar}'")
