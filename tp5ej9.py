@@ -5,6 +5,9 @@
 
 
 def factorion():
+    factorial = 1
+    factorial_lista = []
+    while factorial < 
     numeros_lista = list(str(numero))
     for c in range(len(numeros_lista)):
         numeros_lista[c] = int(numeros_lista[c])
