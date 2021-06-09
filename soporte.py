@@ -27,3 +27,17 @@ def recuadro(mensaje):
     print('╔' + '═' * ancho + '╗')
     print(central + '' * (ancho - len(central) - 1) +  "║")
     print('╚' + linea * ancho + '╝')
+
+def factorial(numero, es_lista):
+    factorial = 1
+    if es_lista == True:
+        lista_factorial = [1]
+        for i in range(1, numero + 1):
+            factorial *= i
+            lista_factorial.append(factorial)
+        return lista_factorial
+    else:
+        for i in range(1, numero + 1):
+            factorial *= i
+        return factorial
+    
