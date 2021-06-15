@@ -39,7 +39,7 @@ def factorion():
             if sum(lista_factorial) ==  numero:
                 factorion = sum(lista_factorial)
                 lista_factorion.append(factorion)
-                print(lista_factorion)
+                return (lista_factorion)
                 
 def prueba():
     while True:
@@ -50,7 +50,8 @@ def prueba():
             break
         else:
             print("La clave es 'mostrar'.")       
-    factorion()
+    mostrar = factorion()
+    print(mostrar)
 
             
 if __name__ == "__main__":
